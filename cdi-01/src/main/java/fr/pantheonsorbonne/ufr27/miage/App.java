@@ -10,15 +10,20 @@ import jakarta.inject.Inject;
 public class App {
 	
 	
-	@Inject
+	//@Inject
 	Repository<User> userRepo;
-	
+
+	//@Inject
+	public App(Repository<User> userRepo) {
+		this.userRepo = userRepo;
+	}
+
 
 	public Repository<User> getRepo() {
 		return this.userRepo;
 	}
-	
-	
+
+	@Inject
 	public void setUserRepo(Repository<User> userRepo) {
 		this.userRepo = userRepo;
 	}

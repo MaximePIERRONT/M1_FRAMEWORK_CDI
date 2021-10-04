@@ -1,15 +1,21 @@
 package fr.pantheonsorbonne.ufr27.miage.service;
 
+import fr.pantheonsorbonne.ufr27.miage.persistance.UserRepository;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 
 
 @RequestScoped
 public class ServiceImpl implements Service {
+
+	//@Inject
+	//UserRepository repo;
 
 	List<Long> ints = new ArrayList<>();
 	List<Long> res = new ArrayList<Long>();

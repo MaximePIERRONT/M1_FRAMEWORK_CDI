@@ -1,10 +1,11 @@
 package fr.pantheonsorbonne.ufr27.miage.service;
 
+import javax.enterprise.context.ConversationScoped;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-
+@ConversationScoped
 public class ServiceImplCached implements Service, Serializable {
 
     private static final long serialVersionUID = 183711835890848362L;

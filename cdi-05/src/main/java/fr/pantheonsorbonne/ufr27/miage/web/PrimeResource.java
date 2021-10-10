@@ -1,5 +1,6 @@
 package fr.pantheonsorbonne.ufr27.miage.web;
 
+import javax.enterprise.context.ConversationScoped;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -8,12 +9,13 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
 import fr.pantheonsorbonne.ufr27.miage.service.Service;
+import fr.pantheonsorbonne.ufr27.miage.service.ServiceImplCached;
 
 @Path("primes")
 public class PrimeResource {
 
-	@Inject 
-	Service service;
+	@Inject
+	ServiceImplCached service;
 
 	@Path("{primeLimit}")
 	@GET
